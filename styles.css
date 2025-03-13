@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--main-bg-color: #f0f0f0;
+	--accent-color: #f8760d;
+	--text-color: #4A4A4A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+	display: flex;
+    flex-direction: column;
+	min-height: 100vh;
+    background-color: --main-bg-color;
+	font-family: "Montserrat", serif;
+	letter-spacing: -0.5px;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: 50px 1fr 50px;
+	min-height: 100vh;
+	background-color:#F0F0F0
+}
+
+.header {
+	grid-row: 1;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: auto;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #4A4A4A;
+    color: #4A4A4A;
+    letter-spacing: normal;
+    width: 100%;
+}
+
+.logo {
+    color: #4A4A4A;
+    font-size: 24px;
+    font-family: "Montserrat", serif;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', serif;
+}
+
+.nav-list_link {
+	color: #4A4A4A;
+}
+
+.nav-list_active {
+	border-bottom: 1px solid #4A4A4A;
+    display: inline-block;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+	grid-row: 2;
+    flex: 1 0 auto;
+    min-height: 695px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-image: url(./img/porsche911med.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.main_wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100ch;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn { 
+	margin-top: 20px;
+	display: inline-block;
+	height: 48px;
+	padding: 12px 28px;
+	background-color: #f8760d;
+	color: #ffff;
+	letter-spacing: 0.15px;
+	font-size: 16px;
+	font-weight: 500;
+    border-radius: 5px;
+	border: 1px solid #fff;
+	transition: opacity 0.2s ease-in;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.about-section {
+	padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+	height: 300px;
+}
+
+.title-1 {
+    margin-bottom: 20px;
+    color: #4A4A4A; 
+}
+
+.content-list__item_3 {
+	background-color: #f0f0f0;
+	color: #4A4A4A;
+}
+
+.footer {
+	flex-shrink: 0;
+	grid-row: 3;
+	padding: 20px 0;
+    background-color: #F0F0F0;
+    border-top: 1px solid #4A4A4A;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: #F0F0F0;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social__item {
+    margin: 0 10px; 
+}
+
+.social__item a {
+    display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+.section {
+	background-color:#F0F0F0;
+	width: 100%; 
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.content-list__item {
+  text-align: center;
+  margin-bottom: 20px;
+  color:#4A4A4A;
+}
+
+.title-1 {
+	margin-top: 60px;
+  	text-align: center;
+}
+
+.title-2 {
+  margin-bottom: 5px;
+}
+
+.content-list__item_2 {
+  margin-top: 0;
+}

@@ -30,7 +30,7 @@ function createPostCard(post) {
                 <button class="like-btn ${post.likes ? 'active' : ''}" 
                         data-post-id="${post.id}"
                         style="margin-left: 10px; cursor: pointer;">
-                    ${post.likes ? 'Liked ♥' : 'Like ♡'}
+                    ${post.likes ? 'Liked ' : 'Like '}
                 </button>
             </div>
         </article>

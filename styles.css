@@ -283,3 +283,17 @@ a {
 .post-card:hover {
     transform: translateY(-5px);
 }
+
+.like-btn {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.like-btn.active {
+    background: #ff4757;
+    color: white;
+    border-color: #ff4757;
+}

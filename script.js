@@ -15,7 +15,7 @@ container.addEventListener('click', (e) => {
         if (post) {
             post.likes = !post.likes;
             e.target.classList.toggle('active', post.likes);
-            e.target.textContent = post.likes ? 'Liked ♥' : 'Like ♡';
+            e.target.textContent = post.likes ? 'Liked' : 'Like';
         }
     }
 });

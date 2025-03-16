@@ -1,5 +1,4 @@
 'use strict';
-
 let posts = [];
 let currentPost = 0;
 let totalPosts = 100;
@@ -7,6 +6,8 @@ const limit = 12;
 let showOnlyLikes = false;
 
 const container = document.getElementById('postsContainer');
+const loadPostButton = document.getElementById('loadPost');
+const showLikesButton = document.getElementById('showLikes');
 
 container.addEventListener('click', (e) => {
     if (e.target.classList.contains('like-btn')) {
@@ -16,6 +17,10 @@ container.addEventListener('click', (e) => {
             post.likes = !post.likes;
             e.target.classList.toggle('active', post.likes);
             e.target.textContent = post.likes ? 'Liked' : 'Like';
+
+            if (showOnlyLikes) {
+                renderPosts();
+            }
         }
     }
 });
@@ -30,7 +35,7 @@ function createPostCard(post) {
                 <button class="like-btn ${post.likes ? 'active' : ''}" 
                         data-post-id="${post.id}"
                         style="margin-left: 10px; cursor: pointer;">
-                    ${post.likes ? 'Liked ' : 'Like '}
+                    ${post.likes ? 'Liked' : 'Like'}
                 </button>
             </div>
         </article>
@@ -77,12 +82,15 @@ function showPostCard() {
     renderPosts();
 }
 
-
-document.getElementById('showLikes').addEventListener('click', function () {
+showLikesButton.addEventListener('click', function () {
     showOnlyLikes = !showOnlyLikes;
+
+    loadPostButton.style.display = showOnlyLikes ? 'none' : 'block';
+
     this.textContent = showOnlyLikes ? 'Show All Posts' : 'Show Liked Posts';
+
     renderPosts();
 });
 
-document.getElementById('loadPost').addEventListener('click', showPostCard);
+loadPostButton.addEventListener('click', showPostCard);
 window.onload = () => loadPosts(container);
